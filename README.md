@@ -27,7 +27,7 @@ This plugin relies on the Algolia service which requires you to create an accoun
 This plugin uses the [official Algolia PHP Client](https://github.com/algolia/algoliasearch-client-php)
 
 ## Issues, Contributing and Support
-Please open a [Github issue](https://github.com/algolia/algoliasearch-client-javascript/issues) to report bugs.
+Please open a [Github issue](https://github.com/prateeksachan/moodle-search_algolia/issues) to report bugs.
 Pull requests are welcome.
 
 Feel free to [contact me](mailto:ps@prateeksachan.com?subject=Moodle%20Algolia%20integration) for any additional features or improvements.
