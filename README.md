@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/prateeksachan/moodle-search_algolia.svg?branch=master)](https://travis-ci.org/prateeksachan/moodle-search_algolia)
-[![License](https://img.shields.io/badge/license-AGPL-blue.svg)](https://github.com/prateeksachan/moodle-search_algolia/blob/master/LICENSE)
+[![License](https://img.shields.io/badge/license-GPL--3.0-blue.svg)](https://github.com/prateeksachan/moodle-search_algolia/blob/master/LICENSE)
 
 # Moodle Global Search - Algolia
 
