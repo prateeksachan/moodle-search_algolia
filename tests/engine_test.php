@@ -54,7 +54,7 @@ class search_algolia_engine_testcase extends advanced_testcase {
     protected $engine = null;
 
     /**
-     * @var Instace of testable_engine.
+     * @var Index name.
      */
     protected $index = null;
 
