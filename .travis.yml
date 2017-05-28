@@ -44,6 +44,3 @@ script:
   - moodle-plugin-ci validate
   - moodle-plugin-ci shifter
   - moodle-plugin-ci phpunit
-
-after_success:
-  - coveralls

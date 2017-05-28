@@ -1,5 +1,5 @@
 [![Build Status](https://travis-ci.org/prateeksachan/moodle-search_algolia.svg?branch=master)](https://travis-ci.org/prateeksachan/moodle-search_algolia)
-[![Coverage Status](https://coveralls.io/repos/github/prateeksachan/moodle-search_algolia/badge.svg?branch=master)](https://coveralls.io/github/prateeksachan/moodle-search_algolia?branch=master)
+[![License](https://img.shields.io/badge/license-AGPL-blue.svg)](https://github.com/prateeksachan/moodle-search_algolia/blob/master/LICENSE)
 
 # Moodle Global Search - Algolia
 
