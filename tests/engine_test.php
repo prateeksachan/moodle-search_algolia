@@ -65,7 +65,7 @@ class search_algolia_engine_testcase extends advanced_testcase {
         $applicationid = getenv('TEST_SEARCH_ALGOLIA_APPLICATION_ID');
         $apikey = getenv('TEST_SEARCH_ALGOLIA_ADMIN_API_KEY');
 
-        $this->index = 'moodle' . time();
+        $this->index = 'moodle' . rand(0, time());
         set_config('indexname', $this->index, 'search_algolia');
 
         if (!$applicationid && defined('TEST_SEARCH_ALGOLIA_APPLICATION_ID')) {
