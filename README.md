@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/prateeksachan/moodle-search_algolia.svg?branch=master)](https://travis-ci.org/prateeksachan/moodle-search_algolia)
+
 # Moodle Global Search - Algolia
 
 This plugin integrates [Algolia](https://www.algolia.com) as the search engine for Moodle's Global Search.
