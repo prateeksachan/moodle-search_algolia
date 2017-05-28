@@ -53,13 +53,20 @@ class search_algolia_engine_testcase extends advanced_testcase {
      */
     protected $engine = null;
 
+    /**
+     * @var Instace of testable_engine.
+     */
+    protected $index = null;
+
     public function setUp() {
         $this->resetAfterTest();
         set_config('enableglobalsearch', true);
 
         $applicationid = getenv('TEST_SEARCH_ALGOLIA_APPLICATION_ID');
         $apikey = getenv('TEST_SEARCH_ALGOLIA_ADMIN_API_KEY');
-        $index = getenv('TEST_SEARCH_ALGOLIA_INDEX');
+
+        $this->index = 'moodle' . time();
+        set_config('indexname', $this->index, 'search_algolia');
 
         if (!$applicationid && defined('TEST_SEARCH_ALGOLIA_APPLICATION_ID')) {
             $applicationid = TEST_SEARCH_ALGOLIA_APPLICATION_ID;
@@ -67,16 +74,13 @@ class search_algolia_engine_testcase extends advanced_testcase {
         if (!$apikey && defined('TEST_SEARCH_ALGOLIA_ADMIN_API_KEY')) {
             $apikey = TEST_SEARCH_ALGOLIA_ADMIN_API_KEY;
         }
-        if (!$index && defined('TEST_SEARCH_ALGOLIA_INDEX')) {
-            $index = TEST_SEARCH_ALGOLIA_INDEX;
-        }
-        if (!$applicationid || !$apikey || !$index) {
+
+        if (!$applicationid || !$apikey) {
             $this->markTestSkipped('Elastic extension test server not set.');
         }
 
         set_config('application_id', $applicationid, 'search_algolia');
         set_config('api_key', $apikey, 'search_algolia');
-        set_config('indexname', $index, 'search_algolia');
 
         $this->generator = self::getDataGenerator()->get_plugin_generator('core_search');
         $this->generator->setup();
@@ -91,7 +95,7 @@ class search_algolia_engine_testcase extends advanced_testcase {
         $this->setAdminUser();
 
         // Cleanup before doing anything on it as the index it is out of this test control.
-        $this->engine->clear_indices($index);
+        $this->engine->clear_indices($this->index);
         $this->engine->setup_index();
 
         $this->search->index(true);
