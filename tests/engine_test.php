@@ -372,7 +372,7 @@ class search_algolia_engine_testcase extends advanced_testcase {
         // First create a bunch of records for user 1 to see.
         $record->denyuserids = array($user2->id);
         $record->content = 'Something1 Something2';
-        $maxresults = (int)(\core_search\manager::MAX_RESULTS * .25);
+        $maxresults = (int)(\core_search\manager::MAX_RESULTS * .10);
         for ($i = 0; $i < $maxresults; $i++) {
             $this->generator->create_record($record);
         }
