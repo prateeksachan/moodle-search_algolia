@@ -126,9 +126,10 @@ class engine extends \core_search\engine {
     public function execute_query($filters, $usercontexts, $limit = 0) {
         global $USER;
         $multiquerysearchqueries = [];
+        $maxlimit = \core_search\manager::MAX_RESULTS;
 
         if (empty($limit)) {
-            $limit = \core_search\manager::MAX_RESULTS;
+            $limit = $maxlimit;
         }
 
         // If there is any problem we trigger the exception as soon as possible.
@@ -148,7 +149,7 @@ class engine extends \core_search\engine {
             'offset' => 0
         );
 
-        // In case of title filter, we need to do a multiQuery search and restrict the searchableAttributes
+        // In case of title filter, we need to do a multiQuery search and restrict the searchableAttributes.
         if ($filters['titlefilter']) {
             $args['length'] = $length / 2;
             $args['indexName'] = $this->config->indexname;
