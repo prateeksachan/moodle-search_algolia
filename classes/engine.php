@@ -106,15 +106,6 @@ class engine extends \core_search\engine {
     protected $requiredacls = array('addObject', 'deleteObject', 'listIndexes', 'deleteIndex', 'settings', 'editSettings');
 
     /**
-     * Initialises the search engine configuration.
-     *
-     * @return void
-     */
-    public function __construct() {
-        parent::__construct();
-    }
-
-    /**
      * Executes an Algolia query by applying filters returning its results.
      *
      * @throws \core_search\engine_exception
