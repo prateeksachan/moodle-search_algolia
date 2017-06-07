@@ -95,7 +95,7 @@ class search_algolia_engine_testcase extends advanced_testcase {
         $this->setAdminUser();
 
         // Cleanup before doing anything on it as the index it is out of this test control.
-        $this->engine->clear_indices($this->index);
+        $this->engine->clear_indices();
         $this->engine->setup_index();
 
         $this->search->index(true);
