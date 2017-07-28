@@ -34,3 +34,5 @@ $string['indexerror'] = 'Error setting up the Algolia index';
 $string['invalidcredentials'] = 'Invalid credentials. The Admin API key or/and Application ID is invalid';
 $string['missingacls'] = 'Your admin API key is missing the following ACLs: "{$a}"';
 $string['pluginname'] = 'Algolia';
+$string['searchinfo'] = 'Search queries';
+$string['searchinfo_help'] = 'Type queries to search for';
