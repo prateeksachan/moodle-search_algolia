@@ -19,6 +19,12 @@ This plugin relies on the Algolia service which requires you to create an accoun
 1. Create an Algolia Account.
 2. Create a [new Application](https://www.algolia.com/manage/applications/new) and obtain the `APPLICATION ID` and `API KEY`.
 
+## Installing the Plugin
+1. Install the plugin by uploading the downloaded zip package from [Moodle Plugins](https://moodle.org/plugins/search_algolia)
+2. You'll be asked for Algolia credentials (`Application ID` and `Admin API KEY`). Save these settings
+3. Go to `Plugins` > `Search` > `Manage Global Search` in your Moodle site. Change search engine used to `Algolia` from the dropdown
+4. Enable Global Search as it is disabled by default
+
 ## Todo
 1. Add file indexing support.
 2. Add Ajax support for a faster "search-as-you-type" search. [Related Moodle Tracker Issue Link](https://tracker.moodle.org/browse/MDL-53344)
