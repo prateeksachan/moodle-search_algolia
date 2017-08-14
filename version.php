@@ -27,4 +27,5 @@ defined('MOODLE_INTERNAL') || die();
 $plugin->version = 2017052700;
 $plugin->release = '1.0';
 $plugin->requires = 2016052300;
+$plugin->maturity  = MATURITY_STABLE;
 $plugin->component = 'search_algolia';
